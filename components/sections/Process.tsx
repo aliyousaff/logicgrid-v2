@@ -1,62 +1,103 @@
 "use client";
 
-// V4 Process Steps
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { ScanLine, Crosshair } from "lucide-react";
+
 const steps = [
     {
-        title: "Discovery & Arch",
+        title: "DISCOVERY_ARCH",
         desc: "We map your current infrastructure and design the optimized future state."
     },
     {
-        title: "Development",
+        title: "DEVELOPMENT_CORE",
         desc: "Rapid execution using our pre-built component library and core engines."
     },
     {
-        title: "Integration",
+        title: "SYSTEM_INTEGRATION",
         desc: "Connecting the new build to your existing tools (CRM, Payment, ERP)."
     },
     {
-        title: "Deployment",
+        title: "DEPLOYMENT_LIVE",
         desc: "Live launch with full testing, SEO checks, and performance validation."
     },
     {
-        title: "Handover",
+        title: "HANDOVER_OWNERSHIP",
         desc: "Training your team and handing over the keys. You own the code."
     }
 ];
 
 export function Process() {
     return (
-        <section id="process" className="py-24 bg-zinc-950 border-t border-zinc-900 relative overflow-hidden">
+        <section id="process" className="py-24 bg-black border-t border-zinc-900 relative overflow-hidden">
+            {/* Grid Blueprint Background */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 pointer-events-none" />
+
             <div className="container px-4 md:px-6 relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-6">
-                    <div className="space-y-6">
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">Execution Protocol</h2>
-                        <p className="text-xl text-violet-500 font-medium max-w-2xl">From concept to console in 5 steps.</p>
-                    </div>
+                <div className="mb-20 text-center space-y-4">
+                    <h2 className="text-4xl md:text-5xl font-mono font-bold tracking-tighter text-white uppercase">
+                        &lt;Execution_Protocol /&gt;
+                    </h2>
+                    <p className="text-zinc-500 font-mono text-sm max-w-xl mx-auto">
+                        SYSTEM_STATUS: <span className="text-green-500">OPERATIONAL</span> // RENDER_MODE: BLUEPRINT
+                    </p>
                 </div>
 
-                <div className="relative border-l border-zinc-800 ml-4 md:ml-0 md:border-l-0 md:border-t md:grid md:grid-cols-5 md:gap-0">
+                <div className="grid md:grid-cols-5 gap-4">
                     {steps.map((step, i) => (
-                        <div key={i} className="relative pl-12 pb-20 md:pl-0 md:pt-16 md:pb-0 group">
-                            {/* Timeline Dot & Line */}
-                            <div className="absolute left-[-5px] top-0 md:top-[-5px] md:left-0 w-[11px] h-[11px] rounded-full bg-black border-2 border-zinc-700 group-hover:bg-violet-500 group-hover:border-violet-500 transition-colors duration-300 z-10 box-content shadow-[0_0_10px_rgba(0,0,0,0.5)]"></div>
+                        <motion.div
+                            key={i}
+                            className="relative group h-[400px] border border-zinc-800 bg-black/50 overflow-hidden cursor-crosshair"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                        >
+                            {/* Static Wireframe State */}
+                            <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-50 group-hover:opacity-10 dark:opacity-50 transition-opacity duration-500">
+                                <div className="space-y-2">
+                                    <div className="text-xs font-mono text-zinc-600">0{i + 1} // INIT</div>
+                                    <h3 className="text-lg font-bold text-zinc-400 font-mono tracking-tighter">{step.title}</h3>
+                                </div>
+                                <div className="w-full h-[1px] bg-zinc-800" />
+                                <div className="w-8 h-8 border border-zinc-800 rounded-full flex items-center justify-center">
+                                    <Crosshair className="w-4 h-4 text-zinc-700" />
+                                </div>
+                            </div>
 
-                            {/* Mobile connecting line fix */}
-                            <div className="absolute left-[0px] top-0 bottom-0 w-px bg-zinc-800 md:hidden block"></div>
+                            {/* Scanning Effect Overlay */}
+                            <motion.div
+                                className="absolute inset-0 bg-violet-950/90 flex flex-col justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            >
+                                {/* Scanner Line */}
+                                <motion.div
+                                    className="absolute top-0 left-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,1)] z-20"
+                                    initial={{ top: "-10%" }}
+                                    whileHover={{ top: "110%" }}
+                                    transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                                />
 
-                            <div className="space-y-8 md:pr-10">
-                                <span className="inline-block text-[10px] font-bold text-zinc-500 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded-full font-mono group-hover:text-violet-400 group-hover:border-violet-500/30 transition-colors">
-                                    PHASE / 0{i + 1}
-                                </span>
-
-                                <div>
-                                    <h3 className="text-2xl font-bold text-zinc-300 mb-4 group-hover:text-white transition-colors tracking-tight">{step.title}</h3>
-                                    <p className="text-base text-zinc-500 leading-relaxed font-medium max-w-[240px] border-l-2 border-zinc-800 pl-6 md:border-0 md:pl-0 group-hover:text-zinc-400 transition-colors">
+                                <div className="space-y-4 relative z-10">
+                                    <div className="flex justify-between items-center">
+                                        <div className="text-xs font-mono text-cyan-400">0{i + 1} // ACTIVE</div>
+                                        <ScanLine className="w-4 h-4 text-cyan-400 animate-pulse" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white font-mono tracking-tight">{step.title}</h3>
+                                    <p className="text-sm text-zinc-300 font-mono leading-relaxed border-l-2 border-cyan-500/50 pl-3">
                                         {step.desc}
                                     </p>
                                 </div>
-                            </div>
-                        </div>
+
+                                <div className="space-y-2 relative z-10">
+                                    <div className="flex justify-between text-[10px] font-mono text-zinc-500">
+                                        <span>RENDER_TIME</span>
+                                        <span>0.00ms</span>
+                                    </div>
+                                    <div className="w-full h-1 bg-zinc-900 rounded-full overflow-hidden">
+                                        <div className="h-full bg-cyan-500 w-[80%] animate-pulse" />
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
