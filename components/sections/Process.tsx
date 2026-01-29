@@ -33,7 +33,15 @@ const steps = [
 
 export function Process() {
     return (
-        <section id="process" className="py-24 bg-zinc-950 border-t border-border relative overflow-hidden transition-colors duration-300 min-h-[800px] flex items-center justify-center perspective-1000">
+        <section id="process" className="py-24 bg-zinc-950 border-t border-border relative overflow-hidden transition-colors duration-300 min-h-[800px] flex items-center justify-center">
+            {/* Custom 3D CSS - Injected locally for the variant */}
+            <style jsx global>{`
+                .perspective-1000 { perspective: 1000px; }
+                .transform-style-3d { transform-style: preserve-3d; }
+                .rotate-x-12 { transform: rotateX(12deg) rotateY(-10deg); }
+                .group:hover .group-hover\\:rotate-0 { transform: rotateX(0deg) rotateY(0deg); }
+            `}</style>
+
             {/* Ambient Background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-violet-900/10 via-background to-background pointer-events-none" />
 
@@ -58,8 +66,8 @@ export function Process() {
                 </div>
 
                 {/* Holographic Stack */}
-                <div className="md:w-1/2 relative h-[500px] w-full max-w-[400px] perspective-[1200px] group">
-                    <div className="relative w-full h-full transform-style-3d rotate-x-12 rotate-y-[-10deg] group-hover:rotate-x-0 group-hover:rotate-y-0 transition-all duration-700 ease-out">
+                <div className="md:w-1/2 relative h-[500px] w-full max-w-[400px] perspective-1000 group">
+                    <div className="relative w-full h-full transform-style-3d rotate-x-12 transition-all duration-700 ease-out group-hover:rotate-0">
                         {steps.map((step, i) => (
                             <motion.div
                                 key={i}
@@ -68,16 +76,17 @@ export function Process() {
                                     "origin-center"
                                 )}
                                 style={{
-                                    top: i * 70, // Stacked offset
+                                    top: i * 60, // Tighter stack
                                     zIndex: steps.length - i,
-                                    transform: `translateZ(${-i * 20}px)`, // Depth spacing
+                                    transform: `translateZ(${-i * 30}px) translateY(${i * 5}px)`, // Depth spacing + Slight Y cascade
                                 }}
                                 whileHover={{
-                                    y: -30, // Lift up
+                                    y: -40, // Strong lift
                                     scale: 1.05,
                                     zIndex: 50,
-                                    translateZ: "50px", // Pull forward
-                                    backgroundColor: "rgba(9, 9, 11, 0.95)" // Make opaque
+                                    translateZ: "100px", // Pull way forward
+                                    backgroundColor: "rgba(9, 9, 11, 0.95)", // Opaque on hover
+                                    boxShadow: "0 20px 50px -12px rgba(124, 58, 237, 0.5)" // Glow
                                 }}
                             >
                                 {/* Glass Shimmer */}
@@ -97,7 +106,7 @@ export function Process() {
                                     </div>
                                 </div>
 
-                                {/* Projected Details (Visible on specific hover via generic css or just imply it) */}
+                                {/* Projected Details */}
                                 <div className="absolute -bottom-8 left-6 text-[10px] font-mono text-zinc-500 opacity-0 hover:opacity-100 transition-opacity whitespace-nowrap">
                                     &gt; {step.detail}
                                 </div>
@@ -106,7 +115,7 @@ export function Process() {
                     </div>
 
                     {/* Fake Shadow */}
-                    <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-3/4 h-20 bg-black/40 blur-3xl rounded-full" />
+                    <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-black/40 blur-3xl rounded-full transform-style-3d translate-z-[-50px]" />
                 </div>
             </div>
         </section>
