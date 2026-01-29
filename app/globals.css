@@ -4,45 +4,71 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    /* Platinum Light Mode */
+    --background: 210 20% 98%;
+    /* Zinc-50 equivalent: Very light gray/white */
+    --foreground: 240 10% 3.9%;
+    /* Zinc-950: Almost black text */
+
+    --card: 0 0% 100%;
+    /* Pure White card */
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
     --primary: 262 83% 58%;
+    /* Violet-600 */
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+
+    --secondary: 240 4.8% 95.9%;
+    /* Zinc-100 */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
     --accent: 262 83% 58%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+
+    --border: 240 5.9% 90%;
+    /* Zinc-200 */
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+
     --radius: 0.5rem;
   }
 
   .dark {
+    /* Cyber Dark Mode (Original) */
     --background: 240 10% 3.9%;
+    /* Zinc-950 */
     --foreground: 0 0% 98%;
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
+
     --primary: 262 83% 58%;
     --primary-foreground: 0 0% 98%;
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
+
     --accent: 262 83% 58%;
     --accent-foreground: 0 0% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
@@ -55,12 +81,12 @@
   }
 
   body {
-    /* Pure Black / Zinc Base */
-    @apply bg-zinc-950 text-foreground relative selection:bg-violet-500/30 selection:text-violet-200;
+    /* Semantic Background */
+    @apply bg-background text-foreground relative selection:bg-violet-500/30 selection:text-violet-200 selection:dark:text-violet-200 selection:bg-violet-500/20;
   }
 }
 
-/* Noise Texture - Lighter, more subtle */
+/* Noise Texture - Adjusted for Light Mode */
 body::before {
   content: "";
   position: fixed;
@@ -72,9 +98,21 @@ body::before {
   mix-blend-mode: overlay;
 }
 
-/* Grid - adjusted for Violet */
+/* Light Mode Specific Adjustments if needed */
+.dark body::before {
+  opacity: 0.35;
+}
+
+/* Grid Pattern - Theme Aware */
 .bg-grid-small-white\/10 {
   background-size: 40px 40px;
+  /* Default (Light Mode) Grid - Dark Gray lines on White */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-grid-small-white\/10 {
+  /* Dark Mode Grid - White lines on Black */
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }

@@ -1,0 +1,43 @@
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\app\layout.tsx
+  2:17  warning  'Space_Grotesk' is defined but never used  @typescript-eslint/no-unused-vars
+  2:32  warning  'Outfit' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\sections\Contact.tsx
+  5:37  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\sections\Deployments.tsx
+  2:10  warning  'Button' is defined but never used      @typescript-eslint/no-unused-vars
+  3:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  3:22  warning  'Lock' is defined but never used        @typescript-eslint/no-unused-vars
+  3:59  warning  'GitMerge' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\sections\Hero.tsx
+  154:82  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  159:82  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\sections\Navigation.tsx
+   5:10  warning  'cn' is defined but never used                          @typescript-eslint/no-unused-vars
+  13:5   warning  'navigationMenuTriggerStyle' is defined but never used  @typescript-eslint/no-unused-vars
+  15:39  warning  'Cloud' is defined but never used                       @typescript-eslint/no-unused-vars
+  15:54  warning  'LinkIcon' is defined but never used                    @typescript-eslint/no-unused-vars
+  19:77  error    Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\sections\services\ServiceCTA.tsx
+  15:24  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  15:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  15:46  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\services\ServiceData.ts
+   1:84  warning  'Server' is defined but never used        @typescript-eslint/no-unused-vars
+  12:11  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\components\services\ServiceSearch.tsx
+  217:102  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  217:110  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\ALi\.gemini\antigravity\playground\primordial-nebula\logicgrid-v2\tailwind.config.ts
+  77:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+Γ£û 22 problems (10 errors, 12 warnings)
+

@@ -1,4 +1,4 @@
-import { Monitor, Cpu, Database, Bot, TrendingUp, ShieldCheck, Cloud, Link, Code2, Server } from "lucide-react";
+import { Monitor, Cpu, Database, Bot, TrendingUp, ShieldCheck, Cloud, Link, Code2, Server, type LucideIcon } from "lucide-react";
 
 export interface ServiceDetail {
     name: string;
@@ -9,7 +9,7 @@ export interface ServiceDetail {
 export interface ServiceCategory {
     id: string;
     title: string;
-    icon: any;
+    icon: LucideIcon;
     description: string;
     services: ServiceDetail[];
 }

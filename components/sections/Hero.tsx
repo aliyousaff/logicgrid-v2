@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 
 export function Hero() {
     return (
-        <section className="relative flex flex-col items-center justify-center pt-8 pb-32 md:pt-12 md:pb-48 overflow-visible bg-black z-20">
+        <section className="relative flex flex-col items-center justify-center pt-8 pb-32 md:pt-12 md:pb-48 overflow-visible bg-background z-20 transition-colors duration-300">
             {/* Background w/ Gradient Fog & Grid */}
             <div className="absolute inset-0 -z-10">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-                <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black via-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+                <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background via-background/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background via-background/80 to-transparent" />
             </div>
 
             <div className="container px-4 md:px-6 relative z-10">
@@ -37,10 +37,10 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]"
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
                         >
                             We Fix Slow Websites, <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">Broken Lead Flow</span>, <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400">Broken Lead Flow</span>, <br />
                             and Manual Operations.
                         </motion.h1>
 
@@ -50,7 +50,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="space-y-6"
                         >
-                            <p className="max-w-[600px] text-zinc-400 md:text-xl font-medium leading-relaxed">
+                            <p className="max-w-[600px] text-muted-foreground md:text-xl font-medium leading-relaxed">
                                 LogicGrid HQ builds fast websites that convert — and automation that removes repetitive work — so your business runs clean and predictable.
                             </p>
 
@@ -60,9 +60,9 @@ export function Hero() {
                                     "Automate follow-ups, routing, and internal tasks",
                                     "Build a system you fully own and can scale"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-zinc-300">
-                                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-violet-500/20 flex items-center justify-center">
-                                            <Check className="w-3 h-3 text-violet-400" />
+                                    <li key={i} className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300">
+                                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-violet-500/10 dark:bg-violet-500/20 flex items-center justify-center">
+                                            <Check className="w-3 h-3 text-violet-600 dark:text-violet-400" />
                                         </div>
                                         {item}
                                     </li>
@@ -151,12 +151,14 @@ export function Hero() {
                                         <div className="flex items-center gap-2 text-zinc-400">
                                             <span className="text-violet-500">●</span>
                                             <span>Traffic Acquisition</span>
-                                            <span className="text-zinc-600 ml-2">// Converting visitors</span>
+                                            {/* <span className="text-zinc-600 ml-2">// Converting visitors</span> */}
+                                            <span className="text-muted-foreground ml-2">{`// Converting visitors`}</span>
                                         </div>
-                                        <div className="flex items-center gap-2 text-zinc-400">
+                                        <div className="flex items-center gap-2 text-muted-foreground">
                                             <span className="text-violet-500">●</span>
                                             <span>Lead Capture</span>
-                                            <span className="text-zinc-600 ml-2">// Routing to CRM</span>
+                                            {/* <span className="text-zinc-600 ml-2">// Routing to CRM</span> */}
+                                            <span className="text-muted-foreground ml-2">{`// Routing to CRM`}</span>
                                         </div>
                                         <div className="mt-2 pt-2 border-t border-zinc-900 text-zinc-500">
                                             &gt; Syncing database state... SUCCESS <br />

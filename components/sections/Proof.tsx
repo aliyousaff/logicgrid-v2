@@ -10,15 +10,15 @@ const items = [
 
 export function Proof() {
     return (
-        <section className="border-y border-zinc-900 bg-zinc-950/30 w-full overflow-hidden">
+        <section className="border-y border-border bg-muted/30 w-full overflow-hidden transition-colors duration-300">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-wrap items-center justify-center md:justify-between py-6 gap-6 md:gap-0">
                     {items.map((item, i) => (
                         <div key={i} className="flex items-center gap-3 group">
-                            <item.icon className="w-5 h-5 text-violet-500" />
+                            <item.icon className="w-5 h-5 text-violet-600 dark:text-violet-500" />
                             <div className="flex flex-col">
-                                <span className="text-sm font-bold text-zinc-300 tracking-wider font-mono">{item.label}</span>
-                                <span className="text-[10px] text-zinc-500 font-mono">{item.benefit}</span>
+                                <span className="text-sm font-bold text-foreground/80 tracking-wider font-mono">{item.label}</span>
+                                <span className="text-[10px] text-muted-foreground font-mono">{item.benefit}</span>
                             </div>
                         </div>
                     ))}
