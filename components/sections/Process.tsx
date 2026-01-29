@@ -47,8 +47,8 @@ export function Process() {
             <div className="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.03)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none" />
 
             <div className="container px-4 md:px-6 relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-6">
-                    <div className="space-y-6">
+                <div className="flex flex-col items-center text-center mb-24 gap-6">
+                    <div className="space-y-6 flex flex-col items-center">
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground">Execution Stream</h2>
                         <div className="flex items-center gap-2 text-violet-600 dark:text-violet-500">
                             <Activity className="w-5 h-5 animate-pulse" />
