@@ -6,27 +6,27 @@ import { cn } from "@/lib/utils";
 const steps = [
     {
         title: "Discovery & Arch",
-        desc: "We map your current infrastructure and design the optimized future state.",
+        desc: "We prioritize understanding your ecosystem before writing code. We map your current infrastructure and design the optimized future state.",
         detail: "Audit · Blueprinting · Tech Selection"
     },
     {
         title: "Development",
-        desc: "Rapid execution using our pre-built component library and core engines.",
+        desc: "Rapid execution using our pre-built component library and core engines to reduce time-to-market by 40%.",
         detail: "Frontend · API Layer · Database"
     },
     {
         title: "Integration",
-        desc: "Connecting the new build to your existing tools (CRM, Payment, ERP).",
+        desc: "We don't build in isolation. We connect the new build deeply into your existing tools (CRM, Payment, ERP) for seamless data flow.",
         detail: "Webhooks · Auth · Data Sync"
     },
     {
         title: "Deployment",
-        desc: "Live launch with full testing, SEO checks, and performance validation.",
+        desc: "Live launch is just the beginning. We perform full load testing, SEO checks, and performance validation before flipping the switch.",
         detail: "Vercel · CI/CD · Latency Tests"
     },
     {
         title: "Handover",
-        desc: "Training your team and handing over the keys. You own the code.",
+        desc: "You aren't locked in. We train your internal team and hand over the keys, documentation, and full source code.",
         detail: "Documentation · Source Code · Support"
     }
 ];
@@ -38,8 +38,7 @@ export function Process() {
             <style jsx global>{`
                 .perspective-1000 { perspective: 1000px; }
                 .transform-style-3d { transform-style: preserve-3d; }
-                .rotate-x-12 { transform: rotateX(20deg) rotateY(-15deg); } /* Steeper angle for drama */
-                .group:hover .stack-container { transform: rotateX(10deg) rotateY(-5deg); } /* Less rotation on hover */
+                .rotate-x-12 { transform: rotateX(20deg) rotateY(-15deg); }
             `}</style>
 
             {/* Ambient Background */}
@@ -55,18 +54,13 @@ export function Process() {
                         </h2>
                         <p className="text-xl text-muted-foreground font-medium max-w-lg leading-relaxed">
                             A vertical slice of our production methodology. <br />
-                            <span className="text-violet-500">Stacked for efficiency. Unstacked for clarity.</span>
-                        </p>
-                    </div>
-                    <div className="hidden md:block pl-6 border-l-2 border-violet-500/20">
-                        <p className="text-sm text-zinc-500 max-w-xs italic">
-                            Hover over any layer to isolate that phase and view deliverables.
+                            <span className="text-violet-500">Interact to uncage the details.</span>
                         </p>
                     </div>
                 </div>
 
                 {/* Holographic Stack */}
-                <div className="md:w-1/2 relative h-[600px] w-full max-w-[450px] perspective-1000 group">
+                <div className="md:w-1/2 relative h-[600px] w-full max-w-[500px] perspective-1000 group">
                     <motion.div
                         className="stack-container relative w-full h-full transform-style-3d rotate-x-12 transition-all duration-700 ease-out"
                         initial="hidden"
@@ -86,63 +80,69 @@ export function Process() {
                                     },
                                     visible: (i) => ({
                                         opacity: 1,
-                                        y: i * 80, // Spread out vertically
-                                        z: -i * 30, // Stack depth
+                                        y: i * 90, // Increased spacing to prevent overlap blocking
+                                        z: -i * 40,
                                         rotateX: 0,
                                         transition: {
-                                            delay: i * 0.15,
+                                            delay: i * 0.1,
                                             type: "spring",
-                                            stiffness: 50
+                                            stiffness: 60
                                         }
                                     })
                                 }}
                                 className={cn(
-                                    "group/card absolute inset-x-0 h-[110px] rounded-xl border border-white/10 bg-zinc-900/60 backdrop-blur-md shadow-2xl flex items-center px-8 transition-all duration-500 ease-out cursor-pointer",
-                                    "hover:bg-zinc-900 hover:border-violet-500/50 hover:shadow-[0_0_40px_rgba(124,58,237,0.4)]"
+                                    "group/card absolute inset-x-0 h-[120px] rounded-xl border border-white/10 bg-zinc-900/80 backdrop-blur-md shadow-2xl flex flex-col justify-center px-8 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden",
+                                    "hover:bg-zinc-950 hover:border-violet-500 hover:shadow-[0_0_50px_rgba(124,58,237,0.5)]"
                                 )}
                                 style={{
-                                    zIndex: steps.length - i,
-                                    transformStyle: 'preserve-3d'
+                                    zIndex: steps.length - i, // Default stack order
+                                    transformStyle: 'preserve-3d',
+                                    height: '110px', // Explicit base height
                                 }}
                                 whileHover={{
-                                    y: i * 80 - 40, // Lift up significantly relative to its position
-                                    scale: 1.1,
-                                    zIndex: 50,
-                                    translateZ: "80px", // Pull forward towards user
+                                    y: i * 90 - 60, // Lift significantly
+                                    height: '240px', // EXPAND CARD HEIGHT
+                                    scale: 1.15,
+                                    zIndex: 100, // FORCE TO FRONT
+                                    translateZ: "100px", // Pull forward
                                 }}
                             >
-                                {/* Glass Shimmer Animation */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-white/0 to-transparent rounded-xl pointer-events-none opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                                {/* Active State Background Glow */}
+                                <div className="absolute inset-0 bg-violet-900/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                                <div className="flex items-center justify-between w-full transform-style-3d">
-                                    <div className="flex items-center gap-6 transform-style-3d translate-z-[20px]">
-                                        <div className="text-xl font-mono font-bold text-violet-500/80">0{i + 1}</div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-foreground tracking-tight">{step.title}</h3>
-                                            <p className="text-sm text-muted-foreground line-clamp-1">{step.desc}</p>
+                                <div className="flex items-start gap-6 transform-style-3d translate-z-[20px] pt-4">
+                                    <div className="text-2xl font-mono font-bold text-violet-500/50 group-hover/card:text-violet-400 transition-colors">0{i + 1}</div>
+                                    <div className="flex-1 space-y-4">
+
+                                        {/* Header Row */}
+                                        <div className="flex items-center justify-between">
+                                            <h3 className="text-xl font-bold text-foreground tracking-tight group-hover/card:text-violet-100 transition-colors">{step.title}</h3>
+                                            <div className="h-2 w-2 rounded-full bg-violet-500/20 group-hover/card:bg-violet-400 group-hover/card:shadow-[0_0_10px_rgba(124,58,237,1)] transition-all" />
                                         </div>
-                                    </div>
 
-                                    <div className="opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
-                                        <div className="h-2 w-2 rounded-full bg-violet-400 animate-pulse shadow-[0_0_15px_rgba(124,58,237,1)]" />
-                                    </div>
-                                </div>
+                                        {/* Hidden Description - REVEALS ON HOVER */}
+                                        <div className="opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-100 flex flex-col gap-4">
+                                            <p className="text-sm text-zinc-300 leading-relaxed">
+                                                {step.desc}
+                                            </p>
+                                            <div className="pt-3 border-t border-white/10 flex items-center gap-2 text-xs font-mono text-violet-300">
+                                                <span className="uppercase tracking-widest text-violet-500/50">Details:</span>
+                                                {step.detail}
+                                            </div>
+                                        </div>
 
-                                {/* Projected Details - "Shadow Projection" Effect */}
-                                <div className="absolute -bottom-10 left-8 px-4 py-1.5 rounded-full bg-black/80 border border-violet-500/30 text-[11px] font-mono text-violet-300 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0 shadow-lg pointer-events-none">
-                                    &gt; {step.detail}
+                                        {/* Collapsed State Subtitle (Fades out on hover) */}
+                                        <p className="text-sm text-muted-foreground line-clamp-1 group-hover/card:hidden absolute top-[50px]">
+                                            {step.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
                     </motion.div>
 
-                    {/* Floor Shadow */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-indigo-950/30 blur-[60px] rounded-full transform rotate-x-60 pointer-events-none"
-                    />
+                    {/* Floor Reflection */}
+                    <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[80%] h-40 bg-violet-900/20 blur-[80px] rounded-full pointer-events-none" />
                 </div>
             </div>
         </section>
