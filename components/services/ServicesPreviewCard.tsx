@@ -21,7 +21,7 @@ export function ServicesPreviewCard() {
                 initial={{ opacity: 0, scale: 0.95, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="w-[400px] h-auto bg-card/90 backdrop-blur-xl border border-violet-500/30 rounded-2xl p-6 shadow-[0_0_60px_rgba(124,58,237,0.4)] overflow-hidden hover:border-violet-500/50 transition-colors"
+                className="w-[400px] max-w-[calc(100vw-2rem)] h-auto bg-card/90 backdrop-blur-xl border border-violet-500/30 rounded-2xl p-6 shadow-[0_0_60px_rgba(124,58,237,0.4)] overflow-hidden hover:border-violet-500/50 transition-colors"
             >
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6 border-b border-border pb-4">

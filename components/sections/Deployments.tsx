@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Bot, Quote, LayoutDashboard, Workflow, ArrowRight, Check, ScanLine } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 // Case Studies Data
 const cases = [
@@ -76,6 +77,12 @@ export function Deployments() {
                         <DeploymentCard key={i} item={item} />
                     ))}
                 </div>
+                <Link href="/work/younis-b-azeem" className="block mt-8 rounded-2xl border border-border bg-card p-7 md:p-10 hover:border-violet-500/50 transition-colors">
+                    <p className="text-sm text-violet-600 dark:text-violet-400 mb-3">Website case study</p>
+                    <h3 className="text-2xl font-semibold mb-3">Younis B. Azeem</h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-3xl">An editable author website with published work, portraits, a contact form and newsletter signup. See the live site and the features delivered.</p>
+                    <span className="inline-flex items-center mt-5 font-medium text-violet-600 dark:text-violet-400">Read the case study <ArrowRight className="ml-2 w-4 h-4" /></span>
+                </Link>
             </div>
         </section>
     );

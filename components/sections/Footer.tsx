@@ -21,9 +21,9 @@ export function Footer() {
                         <h4 className="font-semibold text-foreground tracking-wide text-sm uppercase">Services</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li><a href="/services" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Capability Map</a></li>
-                            <li><a href="/services" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Web Systems</a></li>
-                            <li><a href="/services?q=automation" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Process Automation</a></li>
-                            <li><a href="/services?q=ai" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">AI Integration</a></li>
+                            <li><a href="/systems/web" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Website Development</a></li>
+                            <li><a href="/systems/automation" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Process Automation</a></li>
+                            <li><a href="/systems/ai" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">AI Integration</a></li>
                         </ul>
                     </div>
 
@@ -31,7 +31,8 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-semibold text-foreground tracking-wide text-sm uppercase">Company</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><a href="#process" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Our Process</a></li>
+                            <li><a href="/#process" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Our Process</a></li>
+                            <li><a href="/work/younis-b-azeem" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Website case study</a></li>
                             <li><a href="/#contact" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Contact</a></li>
                             <li><a href="/legal/privacy" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Privacy Policy</a></li>
                             <li><a href="/legal/terms" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Terms of Service</a></li>

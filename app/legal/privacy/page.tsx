@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("Privacy Policy", "Read how LogicGrid Ops handles information submitted through its website and enquiry forms.", "/legal/privacy");
 
 export default function PrivacyPage() {
     return (

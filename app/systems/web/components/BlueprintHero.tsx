@@ -30,12 +30,12 @@ export function BlueprintHero() {
                 </Badge>
 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground">
-                    Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-500">Interfaces</span>
-                    <br /> for Demand Capture
+                    Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-500">Website Development</span>
+                    <br /> Built for Enquiries
                 </h1>
 
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    We engineer low-latency conversion environments designed to process human attention into structured data.
+                    Fast websites, clear service pages and enquiry flows connected to the tools your business uses.
                 </p>
             </div>
 

@@ -77,15 +77,15 @@ export function Nodes() {
                             <p className="text-violet-600 dark:text-violet-400 font-medium text-lg mb-6">Websites that bring customers — not just traffic.</p>
 
                             <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg text-sm font-mono border-l-2 border-border pl-4">
-                                Next.js 14 architecture, SEO optimized structure, and custom conversion flows.
+                                Responsive business websites, SEO foundations, editable content and enquiry flows.
                             </p>
                         </div>
 
                         <div className="relative z-10 mt-12 md:mt-0">
                             <div className="w-full h-px bg-border mb-6" />
-                            <div className="flex items-center text-sm font-bold text-muted-foreground group-hover:translate-x-1 transition-transform tracking-wide uppercase">
+                            <Link href="/systems/web" className="flex items-center text-sm font-bold text-muted-foreground group-hover:translate-x-1 transition-transform tracking-wide uppercase">
                                 Explore Web Systems <ArrowUpRight className="ml-2 w-4 h-4 text-violet-600 dark:text-violet-500 opacity-50" />
-                            </div>
+                            </Link>
                         </div>
                     </div>
 

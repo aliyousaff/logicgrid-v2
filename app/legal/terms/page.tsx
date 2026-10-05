@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("Terms of Service", "Read the terms for using the LogicGrid Ops website and engaging its website development, automation and AI services.", "/legal/terms");
 
 export default function TermsPage() {
     return (

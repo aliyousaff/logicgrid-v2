@@ -19,19 +19,19 @@ import { Logo } from "@/components/ui/logo";
 const components: { title: string; href: string; description: string; icon: any }[] = [
     {
         title: "Web Systems",
-        href: "/services",
+        href: "/systems/web",
         description: "High-performance websites & conversion flows.",
         icon: Monitor,
     },
     {
         title: "Automation",
-        href: "/services?q=automation",
+        href: "/systems/automation",
         description: "Remove manual work with smart workflows.",
         icon: Cpu,
     },
     {
         title: "AI Integration",
-        href: "/services?q=ai",
+        href: "/systems/ai",
         description: "RAG systems & internal assistants.",
         icon: Bot,
     },
