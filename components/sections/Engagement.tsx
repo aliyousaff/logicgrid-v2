@@ -5,40 +5,40 @@ import Link from "next/link";
 
 export function Engagement() {
     return (
-        <section id="engage" className="py-24 bg-zinc-950 border-t border-zinc-900">
+        <section id="engage" className="py-24 bg-background border-t border-border">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-6 mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">Engagement Models</h2>
-                    <p className="text-zinc-500 text-lg">If it touches revenue or operations, we build it.</p>
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Engagement Models</h2>
+                    <p className="text-muted-foreground text-lg">If it touches revenue or operations, we build it.</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
 
                     {/* Launch Build */}
-                    <Card className="bg-black border-zinc-800 flex flex-col hover:border-zinc-700 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)] transition-all h-full">
+                    <Card className="bg-card border-border flex flex-col hover:border-violet-500/30 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)] transition-all h-full">
                         <CardHeader>
-                            <CardTitle className="text-xl text-white">Launch Build</CardTitle>
-                            <CardDescription className="text-zinc-500">Best for high-trust web systems</CardDescription>
+                            <CardTitle className="text-xl text-foreground">Launch Build</CardTitle>
+                            <CardDescription className="text-muted-foreground">Best for high-trust web systems</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-1 space-y-6">
-                            <div className="text-3xl font-bold text-white">Project Basis</div>
+                            <div className="text-3xl font-bold text-foreground">Project Basis</div>
                             <ul className="space-y-3">
                                 {["Strategy + Positioning", "Copywriting", "Design + Build", "Tracking Setup", "Deployment"].map((item) => (
-                                    <li key={item} className="flex items-center gap-2 text-zinc-400 text-sm">
-                                        <Check className="w-4 h-4 text-violet-600" /> {item}
+                                    <li key={item} className="flex items-center gap-2 text-muted-foreground text-sm">
+                                        <Check className="w-4 h-4 text-violet-600 dark:text-violet-500" /> {item}
                                     </li>
                                 ))}
                             </ul>
                         </CardContent>
                         <CardFooter className="pt-8">
-                            <Button variant="outline" className="w-full border-zinc-800 bg-transparent text-white hover:bg-zinc-900 h-12" asChild>
-                                <Link href="#contact">Request a Quote</Link>
+                            <Button variant="outline" className="w-full border-border bg-transparent text-foreground hover:bg-muted h-12" asChild>
+                                <a href="/#contact">Request a Quote</a>
                             </Button>
                         </CardFooter>
                     </Card>
 
                     {/* Systems Retainer (Dominant) */}
-                    <Card className="bg-zinc-900/40 border-violet-500/30 shadow-[0_0_60px_-10px_rgba(139,92,246,0.15)] relative flex flex-col transform md:-translate-y-6 md:scale-105 z-10 h-full">
+                    <Card className="bg-black dark:bg-zinc-900/40 border-violet-500/30 shadow-[0_0_60px_-10px_rgba(139,92,246,0.15)] relative flex flex-col transform md:-translate-y-6 md:scale-105 z-10 h-full">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-violet-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             MOST POPULAR
                         </div>
@@ -62,30 +62,30 @@ export function Engagement() {
                         </CardContent>
                         <CardFooter className="pt-8">
                             <Button className="w-full bg-violet-600 text-white hover:bg-violet-500 font-bold h-12 shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all hover:shadow-[0_0_30px_rgba(124,58,237,0.5)]" asChild>
-                                <Link href="#contact">Discuss Retainer <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                                <a href="/#contact">Discuss Retainer <ArrowRight className="ml-2 w-4 h-4" /></a>
                             </Button>
                         </CardFooter>
                     </Card>
 
                     {/* Automation Project */}
-                    <Card className="bg-black border-zinc-800 flex flex-col hover:border-zinc-700 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)] transition-all h-full">
+                    <Card className="bg-card border-border flex flex-col hover:border-violet-500/30 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)] transition-all h-full">
                         <CardHeader>
-                            <CardTitle className="text-xl text-white">Automation Project</CardTitle>
-                            <CardDescription className="text-zinc-500">Internal workflows & AI systems</CardDescription>
+                            <CardTitle className="text-xl text-foreground">Automation Project</CardTitle>
+                            <CardDescription className="text-muted-foreground">Internal workflows & AI systems</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-1 space-y-6">
-                            <div className="text-3xl font-bold text-white">Scoped Build</div>
+                            <div className="text-3xl font-bold text-foreground">Scoped Build</div>
                             <ul className="space-y-3">
                                 {["Defined Scope", "Custom Integrations", "Internal Tools", "AI Systems", "Documentation Included"].map((item) => (
-                                    <li key={item} className="flex items-center gap-2 text-zinc-400 text-sm">
-                                        <Check className="w-4 h-4 text-violet-600" /> {item}
+                                    <li key={item} className="flex items-center gap-2 text-muted-foreground text-sm">
+                                        <Check className="w-4 h-4 text-violet-600 dark:text-violet-500" /> {item}
                                     </li>
                                 ))}
                             </ul>
                         </CardContent>
                         <CardFooter className="pt-8">
-                            <Button variant="outline" className="w-full border-zinc-800 bg-transparent text-white hover:bg-zinc-900 h-12" asChild>
-                                <Link href="#contact">Plan an Automation</Link>
+                            <Button variant="outline" className="w-full border-border bg-transparent text-foreground hover:bg-muted h-12" asChild>
+                                <a href="/#contact">Plan an Automation</a>
                             </Button>
                         </CardFooter>
                     </Card>

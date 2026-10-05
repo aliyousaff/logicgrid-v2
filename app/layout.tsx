@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "LogicGrid HQ | Digital Infrastructure & Automation",
-  description: "LogicGrid HQ builds digital systems that capture demand, automate operations, and compound growth.",
+  title: "LogicGrid Ops | Digital Infrastructure & Automation",
+  description: "LogicGrid Ops builds digital systems that capture demand, automate operations, and compound growth.",
 };
+
+import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
   children,
@@ -16,9 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning className="dark">
       <body className={cn(inter.className, "bg-background text-foreground antialiased selection:bg-cyan-500/30 selection:text-cyan-200")}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
