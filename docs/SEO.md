@@ -2,6 +2,8 @@
 
 The canonical website is https://logicgridops.com. Titles, descriptions, canonical URLs, social previews and Organization/Service structured data are defined in `lib/seo.ts` and the page modules. Service pages describe websites, business automation and AI integration for clients in Pakistan and overseas without claiming a physical office or guaranteed rankings.
 
+Vercel's project-domain settings permanently redirect `www.logicgridops.com` to `logicgridops.com` with HTTP 308. Paths and query strings are retained. Manage this redirect in Vercel → logicgrid-v2 → Settings → Domains.
+
 ## Google Search Console
 
 1. Add the Domain property `logicgridops.com` in the owner's Google account.
@@ -10,6 +12,8 @@ The canonical website is https://logicgridops.com. Titles, descriptions, canonic
 4. In Sitemaps, submit `https://logicgridops.com/sitemap.xml`.
 5. Use URL Inspection for the home page and the three service pages. Inspect the live URL and request indexing if eligible. Submitting a sitemap or requesting indexing does not guarantee inclusion or a ranking.
 6. Review the Pages and Performance reports as data becomes available. Compare impressions, clicks, queries and enquiry quality over time.
+
+URL Inspection's stored report describes the last Google crawl. Use Test live URL to check the current page after a deployment. A successful sitemap submission confirms that Google processed the sitemap; it does not mean that every listed URL is indexed.
 
 The optional `GOOGLE_SITE_VERIFICATION` environment variable supports an HTML verification tag for a URL-prefix property. It does not replace DNS verification for a Domain property.
 
