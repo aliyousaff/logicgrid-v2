@@ -31,6 +31,8 @@ The sitemap lists canonical content pages. Service-directory search parameters a
 
 ## Continuing work
 
+The desktop task prompts, live technical checker and publication workflow are in [SEO-AUTOMATION.md](SEO-AUTOMATION.md). Scheduled tasks must be saved in the app before they run automatically.
+
 - Add case studies as projects are delivered, using real screenshots with permission, clear scope and verified outcomes. Do not publish invented clients, testimonials or performance numbers.
 - Use Search Console query data and client conversations to choose additional useful service pages. Add location pages only where the business genuinely serves a distinct market and has relevant content.
 - Keep the service descriptions and project evidence current. Link to relevant service pages from professional profiles and legitimate business listings.

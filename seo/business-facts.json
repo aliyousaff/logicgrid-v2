@@ -1,0 +1,21 @@
+{
+  "business": "LogicGrid Ops",
+  "website": "https://logicgridops.com",
+  "email": "growth@logicgridops.com",
+  "markets": ["Pakistan", "International"],
+  "services": ["Business website development", "Workflow automation and CRM integration", "AI integrations and knowledge assistants"],
+  "verifiedCaseStudies": [
+    {
+      "client": "Younis B. Azeem",
+      "website": "https://younisbazeem.com",
+      "caseStudy": "/work/younis-b-azeem",
+      "scope": ["Author website", "Editable content", "Contact form", "Newsletter signup"],
+      "measuredBusinessResults": null
+    }
+  ],
+  "fixedPrices": null,
+  "guaranteedDeliveryTimes": null,
+  "physicalOfficeAddress": null,
+  "approvedTestimonials": [],
+  "notes": "Describe capabilities and genuine delivered scope. Client enquiries, rankings, revenue, conversion rates and keyword volumes require evidence; none are established by this facts file. Never use invented claims, testimonials, local offices or guarantees."
+}

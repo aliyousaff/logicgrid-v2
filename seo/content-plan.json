@@ -1,0 +1,29 @@
+{
+  "minimumDaysBetweenNewGuides": 14,
+  "topics": [
+    {
+      "topic": "What a business website project includes: scope, ownership and ongoing costs",
+      "audience": "Small businesses in Pakistan and overseas",
+      "relatedService": "/systems/web",
+      "status": "candidate",
+      "publishedAt": null,
+      "reason": "Help buyers compare proposals and understand what to ask for. Quote factors without invented market prices."
+    },
+    {
+      "topic": "When to automate a business workflow and when to keep human review",
+      "audience": "Owners and operations managers",
+      "relatedService": "/systems/automation",
+      "status": "candidate",
+      "publishedAt": null,
+      "reason": "Explain a realistic workflow with exceptions, ownership, monitoring and handoff. Label examples as illustrative."
+    },
+    {
+      "topic": "Preparing company documents for an AI knowledge assistant",
+      "audience": "Teams exploring AI integrations",
+      "relatedService": "/systems/ai",
+      "status": "candidate",
+      "publishedAt": null,
+      "reason": "Explain source quality, permissions, evaluation and escalation. Verify current vendor details with primary documentation."
+    }
+  ]
+}
