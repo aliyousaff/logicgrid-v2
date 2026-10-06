@@ -4,7 +4,9 @@
 
 These are prepared task prompts and a runnable checker. They are not proof that a schedule is active. Save the two tasks in Codex desktop's Scheduled view before relying on recurring execution. Local tasks need this computer on, the app running and the project available on disk. No OpenAI API key or GitHub AI runner is used.
 
-Google Domain ownership has been verified by the owner, and the owner requested homepage indexing. Successful sitemap processing and current Google indexing have not yet been confirmed. GSC Wizard is installed, but access to its tools and the LogicGrid Ops property must be confirmed in a run before reporting Google metrics.
+GSC Wizard access to `sc-domain:logicgridops.com` was confirmed with owner permissions on October 6, 2026. Google processed the eight-URL sitemap with zero errors and warnings. URL Inspection reports the `www` homepage as **Submitted and indexed** (last crawl September 15). The bare-domain homepage's stored report is **Crawled - currently not indexed**, with an old February 21 crawl that predates the recent SEO changes. Do not describe the entire website as unindexed from that old report. Monitor both URL variants while Google updates its records; the configured canonical domain remains `https://logicgridops.com`.
+
+The dated connection, sitemap, URL Inspection and performance baseline is stored privately at `.seo-reports/gsc-baseline.json`. Check the connector's current access and plan before relying on it long-term. If access expires, continue technical maintenance and report the data-access limitation; do not purchase a plan automatically.
 
 ## Save once in Codex desktop
 
