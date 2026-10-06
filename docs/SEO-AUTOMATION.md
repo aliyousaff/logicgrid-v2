@@ -2,11 +2,11 @@
 
 ## Setup status (2026-10-06)
 
-These are prepared task prompts and a runnable checker. They are not proof that a schedule is active. Save the two tasks in Codex desktop's Scheduled view before relying on recurring execution. Local tasks need this computer on, the app running and the project available on disk. No OpenAI API key or GitHub AI runner is used.
+These are prepared task prompts and runnable readers. They are not proof that a schedule is active. Save the two tasks in Codex desktop's Scheduled view before relying on recurring execution. Local tasks need this computer on, the app running and the project available on disk. No OpenAI API key or GitHub AI runner is used. The owner explicitly prohibits additional purchases, paid API usage, SEO subscriptions and billing upgrades. Use the free direct Search Console connection described in [FREE-SEARCH-CONSOLE.md](FREE-SEARCH-CONSOLE.md); it still needs the owner's one-time OAuth setup and live verification.
 
 GSC Wizard access to `sc-domain:logicgridops.com` was confirmed with owner permissions on October 6, 2026. Google processed the eight-URL sitemap with zero errors and warnings. URL Inspection reports the `www` homepage as **Submitted and indexed** (last crawl September 15). The bare-domain homepage's stored report is **Crawled - currently not indexed**, with an old February 21 crawl that predates the recent SEO changes. Do not describe the entire website as unindexed from that old report. Monitor both URL variants while Google updates its records; the configured canonical domain remains `https://logicgridops.com`.
 
-The dated connection, sitemap, URL Inspection and performance baseline is stored privately at `.seo-reports/gsc-baseline.json`. Check the connector's current access and plan before relying on it long-term. If access expires, continue technical maintenance and report the data-access limitation; do not purchase a plan automatically.
+The initial baseline from GSC Wizard is stored privately at `.seo-reports/gsc-baseline.json`. It remains historical evidence; recurring work now uses `npm run seo:gsc`, which calls Google's free API directly. Do not use or renew a paid connector trial. If direct authorization is unavailable, continue technical maintenance and report the missing owner action.
 
 ## Save once in Codex desktop
 
@@ -16,11 +16,12 @@ The dated connection, sitemap, URL Inspection and performance baseline is stored
 4. Choose the local project execution option, so the tasks share private report state. Use the existing plan/model and the project's normal permission settings. Do not enable paid API usage or change global security settings.
 5. Use **Run now** for each task and review its initial output. The technical checker has been tested separately, but this also verifies scheduled execution, connector availability and account access.
 
-If the scheduling control is available as a tool in a future chat, use that tool to inspect/create the tasks and verify the saved state. Don't create duplicates. If GSC Wizard's tools aren't visible after connecting, reopen the chat/app and test property listing. Never paste OAuth callback URLs, API keys or browser cookies into task prompts.
+If the scheduling control is available as a tool in a future chat, use that tool to inspect/create the tasks and verify the saved state. Don't create duplicates. If the earlier prompts were already saved, replace their text with the current free-only prompts. Never paste OAuth callback URLs, API keys or browser cookies into task prompts.
 
 ## Files and private state
 
 - `npm run seo:audit` checks the live canonical domain, all sitemap URLs (up to 200), metadata, indexability, JSON-LD, required core routes, WWW redirects, social image and true 404s. It returns exit code 1 on a failure and writes `.seo-reports/latest.json` and `previous.json`.
+- `npm run seo:gsc` reads the free Google API after direct authorization. Private reports go to `.seo-reports/direct-gsc/`. Read actual command success and report timestamps before using them; a stored report can outlive revoked access.
 - `.seo-reports/` is ignored by Git. Keep technical snapshots, notification fingerprints and aggregate GSC reports here. Don't store submitted form details, credentials or OAuth codes.
 - `seo/business-facts.json` is the factual baseline. It contains no verified business-result metrics or approved fixed prices.
 - `seo/content-plan.json` is a topic queue, not keyword-volume evidence. Update publication dates only after live verification. New guides are capped at one per 14 days.
@@ -56,4 +57,4 @@ Repository: `aliyousaff/logicgrid-v2`, primary branch `master`. Vercel: project 
 
 ## Operating limits
 
-Google decides whether and when to crawl, index and rank pages. Tasks can maintain technical readiness, publish useful work and analyze actual data; they cannot guarantee rankings or clients. Connector access, Google ownership and any action needing a signed-in UI may occasionally require the owner. Don't silently purchase additional services. These desktop tasks use the existing plan's usage allowance and run only when its local execution requirements are met.
+Google decides whether and when to crawl, index and rank pages. Tasks can maintain technical readiness, publish useful work and analyze actual data; they cannot guarantee rankings or clients. Google authorization, ownership and actions needing a signed-in UI may occasionally require the owner. Never purchase additional services or enable paid usage for this workflow. These desktop tasks use the existing plan's usage allowance and run only when its local execution requirements are met.

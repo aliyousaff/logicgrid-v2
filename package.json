@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seo:audit": "node scripts/seo-audit.mjs"
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:gsc:setup": "npm --prefix scripts/gsc-client ci --ignore-scripts",
+    "seo:gsc:auth": "node scripts/gsc-client/auth.mjs",
+    "seo:gsc": "node scripts/gsc-client/report.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
